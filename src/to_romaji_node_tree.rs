@@ -1868,7 +1868,7 @@ lazy_static! {
                             },
                         ),
                     ]),
-                    output: "",
+                    output: "xtsu",
                 },
             ),
             (

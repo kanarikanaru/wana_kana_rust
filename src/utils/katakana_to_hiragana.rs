@@ -64,6 +64,8 @@ pub(crate) fn katakana_to_hiragana_with_opt(input: &str, is_destination_romaji: 
                 .unwrap()
                 .output;
 
+            // TODO: Causes panic when "っ" is converted to an empty string
+            // Changed the romaji map to accommodate this.
             let romaji = romaji.chars().last().unwrap_or_else(|| {
                 panic!("could not find kana {:?} in TO_ROMAJI map", previous_kana)
             });
